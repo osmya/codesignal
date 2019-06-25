@@ -5,6 +5,7 @@
 # list comprehension like the most
 def rotateImage(a): # did similar in data notebook
     return [[x[i] for x in a][::-1] for i in range(len(a))] 
+# returns values from a reversed for index in range lenght of array (end-point)
 
 # my origianl sol
 
