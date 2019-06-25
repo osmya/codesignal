@@ -60,3 +60,14 @@ for a more complete definition with examples.
 https://stackoverflow.com/questions/5917522/unzipping-and-the-operator
 """
 
+# other solution
+
+def rotateImage(a):
+    rotated = []
+    for i in range(len(a[0])):
+        row = []
+        for j in reversed(range(len(a[0]))):
+            print(a[j][i])
+            row.append(a[j][i])
+        rotated.append(row)
+    return rotated
