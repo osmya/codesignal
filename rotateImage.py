@@ -1,4 +1,4 @@
-def rotateImage(a):
+def rotateImage(a): # i did not know how zip works
     start = min(range(len(a)))
     end = max(range(len(a)))
     unitmin = min(range(len(a[0])))
