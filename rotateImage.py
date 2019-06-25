@@ -1,3 +1,13 @@
+#############
+####LIKE#####
+#############
+
+# list comprehension like the most
+def rotateImage(a): # did similar in data notebook
+    return [[x[i] for x in a][::-1] for i in range(len(a))] 
+
+# my origianl sol
+
 def rotateImage(a): # i did not know how zip works
     start = min(range(len(a)))
     end = max(range(len(a)))
