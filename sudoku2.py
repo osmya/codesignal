@@ -115,3 +115,55 @@ def sudoku2(a):
         return False
 
 # or return count <=0 and 1 not in result
+
+
+
+
+# alternative solutions
+
+def sudoku2(grid):
+    def unique(G):
+        G = [x for x in G if x != '.']
+        return len(set(G)) == len(G)
+    def groups(A):
+        B = zip(*A)
+        for v in xrange(9):
+            yield A[v]
+            yield B[v]
+            yield [A[v/3*3 + r][v%3*3 +c] 
+                   for r in xrange(3) for c in xrange(3)]
+    
+    return all(unique(grp) for grp in groups(grid))
+
+
+# another
+
+def check_unique(nums):
+    s = set()
+    for num in nums:
+        if num == '.':
+            continue 
+            
+        if num in s:
+            return False
+        s.add(num)
+    return True
+        
+
+def sudoku2(grid):
+    for line in grid:
+        if not check_unique(line):
+            return False
+    
+    for i in range(9):
+        if not check_unique([line[i] for line in grid]):
+            return False
+        
+    for i in range(0,9,3): # range between 0 and 9, every 3
+        for j in range(0, 9, 3): # this is basicaly grids
+            if not check_unique(grid[i][j:j+3] + grid[i+1][j:j+3] + grid[i+2][j:j+3]):
+                return False
+            
+    return True
+
+
