@@ -114,4 +114,4 @@ def sudoku2(a):
     else:
         return False
 
-# or return count <=1 and 1 not in result
+# or return count <=0 and 1 not in result
