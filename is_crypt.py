@@ -1,5 +1,5 @@
 def isCryptSolution(c, s):
-    keys = {key: value for (key, value) in s}
+    keys = {key: value for (key, value) in s} # can use dict(s)
     factors = []
     total = []
     
