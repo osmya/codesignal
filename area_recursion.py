@@ -4,7 +4,7 @@ def sh(n):
     elif n == 1:
         return 1
     else:
-        return sh(n-1) + 4*(n-1)
+        return sh(n-1) + 4*(n-1) # 1 square per side, with n-1 sides
     
     
 # non recursive
