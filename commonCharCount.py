@@ -52,3 +52,8 @@ def commonCharacterCount(s1, s2):
  def commonCharacterCount(s1, s2):
     commons = [min(s1.count(i), s2.count(i)) for i in set(s1)]
     return sum(commons)
+
+
+# alternative
+
+    return sum(min(s1.count(x), s2.count(x)) for x in set(s1))
